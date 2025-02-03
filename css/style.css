@@ -1,0 +1,228 @@
+/* الإعدادات الأساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95em; /* تقليل حجم الخط العام */
+}
+
+/* تنسيق الحاوية */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم الأيقونة الخاصة بالتحميل */
+.download-icon a {
+  display: inline;
+  font-size: 0.8em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.download-icon a:hover {
+  transform: scale(1.05); /* تكبير بسيط عند التمرير */
+}
+.download-icon i {
+  margin-right: 7px; /* إضافة مسافة بين الأيقونة والنص */
+}
+
+/* تصميم العنوان */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2.1em; /* تصغير العنوان */
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 0.95em; /* تقليل حجم النص */
+  color: #555;
+}
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* تصميم العناوين الرئيسية */
+h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em; /* تقليل حجم العناوين */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #0077cc;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+/* تنسيق الأقسام */
+.education-item,
+.experience-item {
+  margin-bottom: 15px;
+}
+.education-item span,
+.experience-item span,
+.time {
+  float: right;
+  font-size: 0.85em; /* تقليل حجم النص الجانبي */
+  color: #777;
+}
+ul {
+  padding-left: 20px;
+}
+ul li {
+  font-size: 0.9em; /* تقليل حجم القائمة */
+  margin-bottom: 5px;
+}
+.certificates ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.certificates li {
+  margin-bottom: 15px;
+}
+.certificates ul ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+.certificates strong {
+  font-weight: bold;
+  font-size: 1.2em; /* تقليل حجم الخط */
+}
+.place{
+  list-style-type: circle;
+}
+
+/* تصميم قسم المهارات */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* قسم اللغات */
+.languages {
+  margin-top: 30px;
+}
+.languages ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.languages li {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* تنسيق الـ Footer */
+footer {
+  margin: 15px 0 0 0;
+  font-size: 11px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Media Queries - لجعل الـ CV متجاوب */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 15px; /* تقليل المسافات الداخلية */
+  }
+  h1 {
+      font-size: 1.5em; /* تقليل حجم العنوان */
+  }
+  h2 {
+      font-size: 1.3em; /* تقليل حجم العناوين */
+  }
+  p,
+  li {
+      font-size: 0.85em; /* تقليل حجم النص في الشاشات الصغيرة */
+  }
+  .skills-container {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* عمودان في الشاشات الصغيرة */
+  }
+  .education-item span,
+  .experience-item span {
+      font-size: 0.8em; /* تقليل حجم النص الجانبي */
+  }
+  .certificates strong {
+      font-size: 1.1em; /* تصغير أكثر لحجم النص */
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.4em; /* تقليل العنوان بشكل أكبر للأجهزة الصغيرة */
+  }
+  header p {
+      font-size: 0.7em; /* تقليل حجم النص */
+  }
+  h2 {
+      font-size: 1.2em; /* تقليل حجم العناوين للأجهزة الصغيرة */
+      border-bottom: 1.5px solid #0077cc;
+  }
+  h3{
+      font-size: 0.9em;
+  }
+  .skill-category h3{
+      font-size: 0.8em;
+  }
+  p{
+      font-size: 0.7em;
+  }
+  .certificates strong {
+      font-size: 1.3em; 
+  }
+  .place{
+      font-size: 1.7em;
+  }
+  ul{
+      font-size: 0.6em; /* تصغير النص بشكل أكبر للأجهزة الصغيرة جداً */
+  }
+  .skills-container {
+      grid-template-columns: 1fr; /* عمود واحد للأجهزة الصغيرة جداً */
+      gap: 5px;
+  }
+  .container {
+      padding: 10px; /* تقليل المسافة الداخلية بشكل أكبر */
+  }
+  h2,
+  h3,
+  strong{
+      letter-spacing: normal;
+  }
+  section{
+      margin: 20px 0 30px 0;
+  }
+  .skills{
+      margin: 20px 0 0px 0;
+  }
+  footer{
+      margin-top: 10px;
+      font-size: 9px;
+  }
+  .download-icon a {
+      font-size: 0.6em; /* تقليل حجم النص أكثر للأجهزة الصغيرة */
+  }
+  .download-icon i {
+      font-size: 0.9em; /* تصغير الأيقونة */
+      margin-right: 5px; /* تقليل المسافة بين الأيقونة والنص */
+  }
+}
